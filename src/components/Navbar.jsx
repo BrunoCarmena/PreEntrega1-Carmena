@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaShoppingCart } from 'react-icons/fa';
+import CartWidget from './CartWidget'
+
 
 const Navbar = () => {
     return (
@@ -12,10 +13,7 @@ const Navbar = () => {
                     <li><a href="#">Quienes Somos</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
-                <div>
-                    <a href="" className='cart'><FaShoppingCart /></a>
-                    0
-                </div>
+                <CartWidget />
             </nav>
         </div>
     )
