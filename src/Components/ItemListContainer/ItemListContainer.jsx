@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({ greeting }) => {
   return (
     <div style={containerStyle}>
-        
-        <h1 style={tituloStyle}>{greeting}</h1>
+
+      <h1 style={tituloStyle}>{greeting}</h1>
 
     </div>
   )
