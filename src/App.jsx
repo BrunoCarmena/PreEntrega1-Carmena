@@ -16,6 +16,7 @@ function App() {
     <Routes>
     <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a Rosario3D"} />} />
     <Route exact path='/products' element={<Products/>}/>
+    <Route exact path="/product/:prodId" element={<SingleProduct />} />
     </Routes>
     </BrowserRouter>
     </div>
