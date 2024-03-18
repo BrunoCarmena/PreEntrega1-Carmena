@@ -24,4 +24,4 @@ const tituloStyle = {
   fontWeight: 'bold',
 }
 
-export default ItemListContainer
+export default ItemListContainer //
