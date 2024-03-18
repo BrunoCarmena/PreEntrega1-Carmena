@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getProduct } from '../../asyncMock';
+import { getProduct } from '../../asynmock';
 
 const SingleProduct = () => {
 
