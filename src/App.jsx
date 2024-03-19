@@ -2,8 +2,8 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import Navbar from './Components/NavBar/Navbar'
-import Products from './Components/Products/Products'
-import SingleProduct from './Components/product/SingleProduct'
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
+
 
 
 
@@ -16,8 +16,7 @@ function App() {
       <Navbar />
     <Routes>
     <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a Rosario3D"} />} />
-    <Route exact path='/products' element={<Products/>}/>
-    <Route exact path="/product/:prodId" element={<SingleProduct/>} />
+    <Route element={<ItemDetailContainer/>}/>
     </Routes>
     </BrowserRouter>
     </div>

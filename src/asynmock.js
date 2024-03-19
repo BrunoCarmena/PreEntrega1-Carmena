@@ -1,4 +1,4 @@
-export const fetchProducts = () => {
+export const getProducts = () => {
     return new Promise((resolve) => {
 
         setTimeout(() => {
@@ -61,9 +61,7 @@ export const fetchProducts = () => {
 };
 
 
-export const getProduct = (id) => {
-    return products.find((product) => product.id === id);
-}
+
 
 
 
