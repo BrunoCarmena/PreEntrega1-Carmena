@@ -16,7 +16,8 @@ function App() {
       <Navbar />
     <Routes>
     <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a Rosario3D"} />} />
-    <Route element={<ItemDetailContainer/>}/>
+    <Route path='/products' element={<ItemListContainer/>} />
+    <Route path='/product/:Id' element={<ItemDetailContainer/>}/>
     </Routes>
     </BrowserRouter>
     </div>

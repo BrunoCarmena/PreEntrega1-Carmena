@@ -1,49 +1,48 @@
-import React from 'react'
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-
-const ItemDetailContainer = ({ products }) => {
-
+const ItemDetailContainer = () => {
     const navigate = useNavigate();
-    const categoria = useParams().categoria;
-
-    const [products, setProducts] = useState([]);
-
+    const { categoria } = useParams();
+    const [ setProducts] = useState([]);
 
     useEffect(() => {
-        getProducts()
-            .then((data) => {
+
+        const fetchData = async () => {
+            try {
+
+                const data = await getProducts();
                 if (categoria) {
-                    const filteredProducts = data.filter((products) => products.categoria.toLowerCase().includes(categoria));
+                    const filteredProducts = data.filter(product => product.categoria.toLowerCase().includes(categoria));
                     setProducts(filteredProducts);
-                }
-                else {
+                } else {
                     setProducts(data);
                 }
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error(error);
-            });
-    }, [categoria]);
+            }
+        };
 
+        fetchData();
+    }, [categoria]);
 
     const clickHandler = (id) => {
         navigate(`/detalle/${id}`);
     };
 
-
     return (
         <>
-            <div className='itemDetalle'>
-                <h1 className='nombreDetalle'>Nombre: {products.nombre}</h1>
-                <img className='imgDetalle' src={products.imageUrl} alt={products.nombre} />
-                <p className='descripcionDetalle'>{products.descripcion}</p>
-                <p className='precioDetalle'>Precio $ {products.precio}</p>
-                <button className="btnDetalle" onClick={()=>clickHandler(products.id)}>Ver Detalle</button>
-            </div>
+            {products.map(product => (
+                <div key={product.id} className='itemDetalle'>
+                    <h1 className='nombreDetalle'>Nombre: {product.nombre}</h1>
+                    <img className='imgDetalle' src={product.imageUrl} alt={product.nombre} />
+                    <p className='descripcionDetalle'>{product.descripcion}</p>
+                    <p className='precioDetalle'>Precio $ {product.precio}</p>
+                    <button className="btnDetalle" onClick={() => clickHandler(product.id)}>Ver Detalle</button>
+                </div>
+            ))}
         </>
-    )
-}
+    );
+};
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
