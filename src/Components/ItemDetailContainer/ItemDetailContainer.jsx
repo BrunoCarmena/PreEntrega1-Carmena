@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { getProducts } from '../../asynmock';
 
 const ItemDetailContainer = () => {
     const navigate = useNavigate();
     const { categoria } = useParams();
-    const [ setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-
         const fetchData = async () => {
             try {
-
                 const data = await getProducts();
                 if (categoria) {
                     const filteredProducts = data.filter(product => product.categoria.toLowerCase().includes(categoria));

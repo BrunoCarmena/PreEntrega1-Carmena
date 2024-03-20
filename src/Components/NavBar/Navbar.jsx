@@ -12,7 +12,7 @@ const Navbar = () => {
                 <img src={logo} alt="" className='logo' />
                 <ul>
                     <li><Link to={'/'}>Inicio</Link></li>
-                    <li><Link to={'/Products'}>Productos</Link></li>
+                    <li><Link to={'/asynmock'}>Productos</Link></li>
                     <li><Link to={'/About'}>Quienes Somos</Link></li>
                     <li><Link to={'/Contact'}>Contactanos</Link></li>
                 </ul>

@@ -6,51 +6,56 @@ export const getProducts = () => {
             const products = [
                 {
                     id: 1,
-                    nombre: 'Product 1',
-                    descripcion: "mate Colon",
+                    nombre: 'Mate Colon',
+                    descripcion: "",
                     precio: 10,
+                    categoria:'mate',
                     imageUrl: '../src/assets/img/mates/mate1.jpg',
                 },
 
                 {
                     id: 1,
-                    nombre: 'Product 1',
-                    descripcion: "mate Colon",
+                    nombre: 'Mate Skull',
+                    descripcion: "mate Calavera",
                     precio: 10,
-                    imageUrl: '../src/assets/img/mates/mate1.jpg',
+                    categoria:'mate',
+                    imageUrl: '../src/assets/img/mates/mate2.jpg',
                 },
 
                 {
                     id: 1,
-                    nombre: 'Product 1',
-                    descripcion: "mate Colon",
+                    nombre: 'Muñeco Messi',
+                    descripcion: "El Messias",
                     precio: 10,
-                    imageUrl: '../src/assets/img/mates/mate1.jpg',
+                    categoria:'Muñeco',
+                    imageUrl: '../src/assets/img/muñecos/muñe1.jpg',
                 },
 
                 {
                     id: 1,
-                    nombre: 'Product 1',
-                    descripcion: "mate Colon",
+                    nombre: 'Muñeco Nezuko',
+                    descripcion: "Nezuko",
                     precio: 10,
-                    imageUrl: '../src/assets/img/mates/mate1.jpg',
+                    categoria:'Muñeco',
+                    imageUrl: '../src/assets/img/muñecos/muñe2.jpg',
                 },
 
                 {
                     id: 1,
-                    nombre: 'Product 1',
-                    descripcion: "mate Colon",
+                    nombre: 'Soporte Sheng-Long',
+                    descripcion: "Dragon ball",
                     precio: 10,
-                    categoria: 'mate',
-                    imageUrl: '../src/assets/img/mates/mate1.jpg',
+                    categoria: 'Soportes',
+                    imageUrl: '../src/assets/img/soportes/sopor2.jpg',
                 },
 
                 {
                     id: 1,
-                    nombre: 'Product 1',
-                    descripcion: "mate Colon",
+                    nombre: 'Soporte Hachas GoW',
+                    descripcion: "Hachas God Of War",
                     precio: 10,
-                    imageUrl: '../src/assets/img/mates/mate1.jpg',
+                    categoria:'soportes',
+                    imageUrl: '../src/assets/img/soportes/sopor3.jpg',
                 },
 
             ];
