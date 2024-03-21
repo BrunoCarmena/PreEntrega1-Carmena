@@ -14,7 +14,7 @@ export const getProducts = () => {
                 },
 
                 {
-                    id: 1,
+                    id: 2,
                     nombre: 'Mate Skull',
                     descripcion: "mate Calavera",
                     precio: 10,
@@ -23,34 +23,34 @@ export const getProducts = () => {
                 },
 
                 {
-                    id: 1,
+                    id: 3,
                     nombre: 'Muñeco Messi',
                     descripcion: "El Messias",
                     precio: 10,
-                    categoria:'Muñeco',
+                    categoria:'muñeco',
                     imageUrl: '../src/assets/img/muñecos/muñe1.jpg',
                 },
 
                 {
-                    id: 1,
+                    id: 4,
                     nombre: 'Muñeco Nezuko',
                     descripcion: "Nezuko",
                     precio: 10,
-                    categoria:'Muñeco',
+                    categoria:'muñeco',
                     imageUrl: '../src/assets/img/muñecos/muñe2.jpg',
                 },
 
                 {
-                    id: 1,
+                    id: 5,
                     nombre: 'Soporte Sheng-Long',
                     descripcion: "Dragon ball",
                     precio: 10,
-                    categoria: 'Soportes',
+                    categoria: 'soportes',
                     imageUrl: '../src/assets/img/soportes/sopor2.jpg',
                 },
 
                 {
-                    id: 1,
+                    id: 6,
                     nombre: 'Soporte Hachas GoW',
                     descripcion: "Hachas God Of War",
                     precio: 10,
