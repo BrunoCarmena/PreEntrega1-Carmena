@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a Rosario3D"} />} />
           <Route path='/products' element={<ItemListContainer />} />
-          <Route path='/product/:Id' element={<ItemDetailContainer />} />
+          <Route path='/products/:Id' element={<ItemDetailContainer />} />
           <Route path='/category/:Category' element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
