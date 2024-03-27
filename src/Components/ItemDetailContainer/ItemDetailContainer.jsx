@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getProducts } from '../../asynmock';
 import Category from '../Category/Category';
-import './itemdetail.css';
+import './itemDetail.css';
 
 const ItemDetailContainer = () => {
     const navigate = useNavigate();
@@ -27,10 +27,6 @@ const ItemDetailContainer = () => {
         fetchData();
     }, [categoria]);
 
-    const clickHandler = (id) => {
-        navigate(`/detalle/${id}`);
-    };
-
     return (
         <>
             <div>
@@ -38,19 +34,19 @@ const ItemDetailContainer = () => {
             </div>
 
 
-            <div>
+            <div className='header'>
                 {categoria ? <h1>{categoria}</h1> : <h1>Nuestros Productos</h1>
                 }
             </div>
 
-            <section>
+            <section className='container'>
                 {products.map(product => (
                     <div key={product.id} className='itemDetalle'>
-                        <h1 className='nombreDetalle'>Nombre: {product.nombre}</h1>
+                        <h1 className='nombreDetalle'>{product.nombre}</h1>
                         <img className='imgDetalle' src={product.imageUrl} alt={product.nombre} />
                         <p className='descripcionDetalle'>{product.descripcion}</p>
                         <p className='precioDetalle'>Precio $ {product.precio}</p>
-                        <button className="btnDetalle" onClick={() => clickHandler(product.id)}>Ver Detalle</button>
+                        <Link to={'/item/${id}'} className="btnDetalle" >Ver Detalle</Link>
                     </div>
 
                 ))}

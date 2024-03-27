@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemList from '../itemList/ItemList'
+import ItemList from '../itemList/ItemList';
 
 
 

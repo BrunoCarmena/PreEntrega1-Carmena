@@ -1,6 +1,5 @@
-import React from 'react'
-import './category.css'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Category = () => {
     return (
@@ -11,7 +10,7 @@ const Category = () => {
                 <Link to={'/categoria/soportes'}>Soportes </Link>
             </div>
         </>
-    )
+    );
 }
 
-export default Category
+export default Category;

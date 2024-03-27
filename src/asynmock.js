@@ -7,7 +7,7 @@ export const getProducts = () => {
                 {
                     id: 1,
                     nombre: 'Mate Colon',
-                    descripcion: "",
+                    descripcion: "mate colon campeon",
                     precio: 10,
                     categoria:'mate',
                     imageUrl: '../src/assets/img/mates/mate1.jpg',

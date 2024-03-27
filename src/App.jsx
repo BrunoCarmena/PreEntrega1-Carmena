@@ -1,9 +1,9 @@
 import './App.css';
+import { getProducts } from './asynmock';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Navbar from './Components/NavBar/Navbar';
-import { getProducts } from './asynmock';
-import { useEffect, useState } from 'react';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting={"Bienvenidos a Rosario3D"} />} />
-          <Route path='/products' element={<ItemListContainer />} />
+          <Route path='/products' element={<ItemDetailContainer />} />
           <Route path='/products/:Id' element={<ItemDetailContainer />} />
           <Route path='/category/:Category' element={<ItemDetailContainer />} />
         </Routes>
